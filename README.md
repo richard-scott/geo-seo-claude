@@ -136,6 +136,23 @@ geo-seo-claude/
 
 ---
 
+## Data Storage
+
+The CRM and reporting skills (`/geo prospect`, `/geo proposal`, `/geo compare`) store runtime data outside the Claude Code directory:
+
+```
+~/.geo-prospects/
+├── prospects.json              # Client/prospect pipeline data
+├── proposals/                  # Generated proposal documents
+│   └── <domain>-proposal-<date>.md
+└── reports/                    # Monthly delta reports
+    └── <domain>-monthly-<YYYY-MM>.md
+```
+
+This directory is **not removed** by the uninstaller — delete it manually if you no longer need your prospect data.
+
+---
+
 ## How It Works
 
 ### Full Audit Flow
